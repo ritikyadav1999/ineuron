@@ -29,3 +29,6 @@ Running commands with npm `npm run [command]`
 | command         | description                              |
 | :-------------- | :--------------------------------------- |
 | `start`         | Starts a development instance of the app |
+
+
+## Swagger-UI is implemented : http://localhost:8080/api-docs
