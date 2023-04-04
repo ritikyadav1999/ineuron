@@ -1,6 +1,6 @@
 # Assessment
 
-This is a repository for a REST API tutorial using Node, Express, Typescript & MongoDB.
+This is a repository for a REST API using Node, Express, Typescript, MongoDB and Swagger-UI
 
 ### Install packages
 
