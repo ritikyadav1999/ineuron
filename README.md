@@ -34,14 +34,14 @@ Running commands with npm `npm run [command]`
 ## Swagger-UI is implemented : http://localhost:8080/api-docs
 
 ## Enpoints:
-### 1. register : http://localhost:8080/auth/register
+### 1. Register : http://localhost:8080/auth/register
 #### username,email,password must be provided for new user registeration.
 
-### 2. login : http://localhost:8080/auth/register
+### 2. Login : http://localhost:8080/auth/register
 #### email,password must be provided for log in.
 
-### 3. get all registered users : http://localhost:8080/users/
+### 3. Get all registered users : http://localhost:8080/users/
 
-### 4. delete user by userId : http://localhost:8080/users/delete/{id}
+### 4. Delete user by userId : http://localhost:8080/users/delete/{id}
 
-### 5. update username by userId : http://localhost:8080/users/update/{id}
+### 5. Update username by userId : http://localhost:8080/users/update/{id}
