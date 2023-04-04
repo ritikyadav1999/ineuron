@@ -1,0 +1,109 @@
+openapi: 3.0.0
+info:
+  title: iNeuron Assessment
+  description: implementing swagger-ui
+  version: 1.0
+
+servers:
+  - url: http://localhost:8080/
+    description: server
+
+paths:
+  /users/:
+    get:
+      tags:
+        - Get all Users.
+      summary: Returns all the regstered User.
+
+      responses:
+        "200":
+          description: OK
+
+  /users/update/{id}:
+    patch:
+      tags:
+        - Update a User
+      summary: update user name by user Id.
+
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Parameter description in CommonMark or HTML.
+          schema:
+            type: string
+            minimum: 1
+
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                username:
+                  type: string
+
+      responses:
+        "200":
+          description: Updated
+
+  /users/delete/{id}:
+    delete:
+      tags:
+        - Delete a User
+      summary: delete a user by user Id.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Parameter description in CommonMark or HTML.
+          schema:
+            type: string
+            minimum: 1
+
+      responses:
+        "200":
+          description: Deleted
+
+  /auth/register/:
+    post:
+      tags:
+        - User Registration
+      summary: Register a new user.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                username:
+                  type: string
+                email:
+                  type: string
+                password:
+                  type: string
+      responses:
+        "201":
+          description: created
+
+  /auth/login/:
+    post:
+      tags:
+        - Login
+      summary: Register a new user.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                password:
+                  type: string
+      responses:
+        "200":
+          description: Login Successfull
